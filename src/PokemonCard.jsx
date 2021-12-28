@@ -18,13 +18,15 @@ export const PokemonCard = (props) => {
 
 
     return (
-        <>
+        <div className="m-3">
         {pokemonPic &&     <Card sx={{ maxWidth: 200, minWidth:150 }}>
       <CardActionArea>
         <CardMedia
           component="img"
           image={pokemonPic}
           alt={props.pokemon.name}
+          height="150"
+          width="150"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
@@ -33,6 +35,6 @@ export const PokemonCard = (props) => {
         </CardContent>
       </CardActionArea>
     </Card>}
-        </>
+        </div>
     )
 }

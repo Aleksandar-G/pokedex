@@ -1,0 +1,7 @@
+.pokemon-container {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  grid-template-rows: auto;
+  justify-content: center;
+}

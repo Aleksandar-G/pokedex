@@ -1,5 +1,6 @@
 import React,{useEffect,useState} from 'react'
 import axios from 'axios'
+import "./styles/PokemonOverview.css"
 import { PokemonCard } from './PokemonCard'
 
 export const PokemonOverview = () => {
@@ -20,6 +21,6 @@ export const PokemonOverview = () => {
     },[currPage])
 
     return (
-        <>{pokemons && pokemons.map(x => <PokemonCard key={x.name} pokemon={x} />)}</>
+        <div className="pokemon-container ">{pokemons && pokemons.map(x => <PokemonCard key={x.name} pokemon={x} />)}</div>
     )
 }
