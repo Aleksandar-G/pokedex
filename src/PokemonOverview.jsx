@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from 'react'
 import axios from 'axios'
-import { Card } from './Card'
+import { PokemonCard } from './PokemonCard'
 
 export const PokemonOverview = () => {
 
@@ -20,6 +20,6 @@ export const PokemonOverview = () => {
     },[currPage])
 
     return (
-        <>{pokemons && pokemons.map(x => <Card key={x.name} pokemon={x} />)}</>
+        <>{pokemons && pokemons.map(x => <PokemonCard key={x.name} pokemon={x} />)}</>
     )
 }

@@ -1,7 +1,7 @@
 import React, {useEffect,useState} from 'react'
 import axios from 'axios'
-import "./cardCss.css"
-export const Card = (props) => {
+
+export const PokemonCard = (props) => {
 
     const [pokemonPic, setPokemonPic] = useState(null)
 
