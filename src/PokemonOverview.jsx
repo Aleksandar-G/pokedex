@@ -3,6 +3,7 @@ import axios from 'axios'
 import "./styles/PokemonOverview.css"
 import { PokemonCard } from './PokemonCard'
 import { Pagination } from "@mui/material";
+import { Navigate } from 'react-router-dom'
 
 export const PokemonOverview = () => {
 
@@ -19,6 +20,16 @@ export const PokemonOverview = () => {
             console.log(paginationLimit)
         })
     },[currPage])
+
+    const viewPokemon = (name) => {
+        /*axios.get("https://pokeapi.co/api/v2/pokemon"+name).then((res) => {
+
+        })*/
+
+        <Navigate to={name} />
+
+
+    }
 
     const changePage = (e,v) => {
         setCurrPage(`https://pokeapi.co/api/v2/pokemon?offset=${20*v-20}&limit=20`)
