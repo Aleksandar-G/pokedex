@@ -3,11 +3,10 @@ import axios from "axios";
 import "./styles/PokemonOverview.css";
 import { PokemonCard } from "./PokemonCard";
 import { Pagination } from "@mui/material";
-import { Navigate } from "react-router-dom";
 
 export const PokemonOverview = () => {
   const [currPage, setCurrPage] = useState(
-    "https://pokeapi.co/api/v2/pokemon?offset=0&limit=20"
+    process.env.REACT_APP_POKEMON_API + "?offset=0&limit=20"
   );
   const [paginationLimit, setPaginationLimit] = useState(100);
   const [pokemons, setPokemons] = useState(null);
@@ -21,7 +20,7 @@ export const PokemonOverview = () => {
 
   const changePage = (e, v) => {
     setCurrPage(
-      `https://pokeapi.co/api/v2/pokemon?offset=${20 * v - 20}&limit=20`
+      process.env.REACT_APP_POKEMON_API + `?offset=${20 * v - 20}&limit=20`
     );
   };
 
