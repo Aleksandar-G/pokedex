@@ -16,10 +16,9 @@ export const PokemonCard = (props) => {
         })
     }, [])
 
-
     return (
         <div className="m-3">
-        {pokemonPic &&     <Card sx={{ maxWidth: 200, minWidth:150 }}>
+        {pokemonPic &&     <Card onClick={() => (window.location.href= "http://localhost:3000/pokemon/"+props.pokemon.name)} sx={{ maxWidth: 200, minWidth:150 }}>
       <CardActionArea>
         <CardMedia
           component="img"
